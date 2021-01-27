@@ -200,7 +200,7 @@ export default {
   font-size: 40px;
 }
 .cl_header {
-  background-image: url(/assets/img/back.jpg);
+  background-image: url('../assets/images/back.jpg');
   height: 100%;
   background-attachment: fixed;
   padding: 400px 100px;
