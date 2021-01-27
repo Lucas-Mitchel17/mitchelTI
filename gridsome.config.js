@@ -8,6 +8,5 @@ module.exports = {
 	siteName: '',
 	plugins: [],
 	siteUrl: 'https://Lucas-Mitchel17.github.io',
-	pathPrefix: '/mitchelTi',
-
-},
+	pathPrefix: '/mitchelTi'
+}
