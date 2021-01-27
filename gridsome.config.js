@@ -9,3 +9,4 @@ module.exports = {
 	plugins: [],
 	siteUrl: 'https://Lucas-Mitchel17.github.io'
 }
+
