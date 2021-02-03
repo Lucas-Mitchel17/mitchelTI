@@ -1,125 +1,79 @@
 <template>
   <section>
 
-    <div class="cl_header">
-      <h1 class="cl_title">Palavra chave bem selecionada</h1>
-      <h2 class="cl_subtitle">Subt. Palavra Chave</h2>
-    </div>
+
+    <Topnav></Topnav>
+ <!-- FIM DO TOPNAV-->
+
+    <Header></Header>
  <!-- FIM DO CABEÇALHO-->
-
     <div class="cl_container">
-
-        <div class="">
-
-          <h2 class="cl_subtitle-two">Sobre Min</h2>
-          <hr class="cl_divider">
-        <div class="cl_about-me columns is-mobile is-multiline">
-
-          <div class="column is-full-mobile is-full-tablet is-half-desktop">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          </p>
-          </div>
-
-          <div class="column is-full-mobile is-full-tablet is-half-desktop">
-            <img src="../favicon.png" >
-          </div>
-
-        </div>
-
-      </div>
+      
+      <About></About>
+    
 <!-- FIM DA SEÇÂO-->
-
-      <div>
-        
-          <h2 class="cl_subtitle-two">Como Trabalho / O que Fazemos</h2>
-          <hr class="cl_divider">
-
-          <div class="cl_how-work columns is-mobile is-multiline">
-            <div class="column is-full-mobile is-full-tablet is-one-third-desktop">
-
-              <div>
-                <h3>Cards com Titulo bem selecionado</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-              </div>
-
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-third-desktop">
-              <div>
-                <h3>Cards com Titulo bem selecionado</h3>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-              </div>
-
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-third-desktop">
-              <div>
-                <h3>Cards com Titulo bem selecionado</h3>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-              </div>
-
-            </div>
-          </div>
-
-      </div>
+      <Work></Work>
+      
 
     </div>
 <!-- FIM DA SEÇÂO-->
-
+  
     <div class="cl_paralax">
       <h2 class="cl_subtitle-alternate">Frase transmitindo confiança no serviço</h2>
     </div>
 <!-- FIM DA SEÇÂO-->
 
-     <div class="cl_container">
-        <h2 class="cl_subtitle-two">Portfólio</h2>
-        <hr class="cl_divider"> 
-        <p> Slider com fotos das logos dos sites e links para os mesmos</p>
-        <div class="columns is-mobile is-multiline cl_portfolio">
+     <div class="cl_container" id="portfolio">
+        <Portfolio></Portfolio>
+        
+<!-- FIM DA SEÇÂO--> 
+        <div id="recomendations">
+          <h2 class="cl_subtitle-two">Recomendações de Clientes</h2>
+          <hr class="cl_divider"> 
 
-            <div class="column is-full-mobile is-full-tablet is-one-fifth-desktop">
-              <img src="../favicon.png">
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-fifth-desktop">
-              <img src="../favicon.png">
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-fifth-desktop">
-              <img src="../favicon.png">
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-fifth-desktop">
-              <img src="../favicon.png">
-            </div>
-
-            <div class="column is-full-mobile is-full-tablet is-one-fifth-desktop">
-              <img src="../favicon.png">
-            </div>
-
-        </div>   
-
+          <div class="columns is-mobile is-multiline cl_recomendations">
+            <p class="cl_recomendation-parag">O que Pessoas disseram sobre meu trabalho/ recomendações.</p>
+          </div>
+        </div>
      </div>
+<!-- FIM DA SEÇÂO-->
 
      <footer class="cl_footer">
       <div class="cl_container">
-        <img class="cl_footer-images" src="../favicon.png">
-        <p class="cl_footer-paragraph">2020 © Mitchel TI. Todos os direitos reservados</p>
+        <img class="cl_footer-images" src="../favicon-1.png">
+        <p class="cl_footer-paragraph">2021 © Mitchel TI. Todos os direitos reservados</p>
       </div>
     </footer>
-
+<!-- FIM DA SEÇÂO-->
   </section>
   
 </template>
 
 <script>
+
+import Topnav     from '../components/ui/topnav/topnav.vue'
+import Header     from '../components/ui/header/header.vue'
+import About      from '../components/ui/about/about.vue'
+import Work       from '../components/ui/work/work.vue'
+import Portfolio  from '../components/ui/portfolio/portfolio.vue'
+
 export default {
   metaInfo: {
     title: 'Mitchel TI'
+  },
+  components: {
+    Topnav,
+    Header,
+    About,
+    Work,
+    Portfolio
+  }, 
+
+  data() {
+    return {
+
+    
+      }
   }
 };
 </script>
@@ -128,12 +82,7 @@ export default {
 .home-links a {
   margin-right: 1rem;
 }
-.cl_about-me {
-  display: flex;
-  margin: auto; 
-  justify-content: center;
-  padding-top: 50px; 
-}
+
 .cl_container {
   max-width: 1300px;
   margin: auto;
@@ -159,13 +108,8 @@ export default {
   text-align: center;
   padding-bottom: 10px;
 }
-.cl_how-work {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  padding-top: 50px; 
-  padding-bottom: 100px; 
-}
+
+
 .cl_paralax {
   background-image: url('../assets/images/back2.jpg');
   height: 100%;
@@ -178,33 +122,19 @@ export default {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.cl_title {
-  color: #FFF;
-  font-size:35px
+.cl_recomendations {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
-.cl_subtitle {
-  color: #FFF;
-  font-size: 25px
-}
-.cl_subtitle-two {
-  color: #000;
-  font-size: 25px;
+.cl_recomendation-parag {
   margin: auto;
-  padding-top: 100px; 
-  display: flex;
-  justify-content: center;
 }
+
+
 .cl_subtitle-alternate {
   color: #fff;
   text-align: center;
   font-size: 40px;
 }
-.cl_header {
-  background-image: url('../assets/images/back.jpg');
-  height: 100%;
-  background-attachment: fixed;
-  padding: 400px 100px;
-  background-position: center;
-  background-size: cover;
-}
+
 </style>
